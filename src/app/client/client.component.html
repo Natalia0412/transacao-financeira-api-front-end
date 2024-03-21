@@ -1,0 +1,38 @@
+<div class = "container">
+  <a class="links" id="paracadastro"></a>
+  <div class="content">
+    <div id="cadastro">
+      <form [formGroup] = "formClient" (ngSubmit) = "onSubmit()">
+        <h1> Cadastro de Cliente</h1>
+
+            <label for="nome_cad">Seu nome</label>
+            <input id="nome_cad" name="nome_cad" required type="text" placeholder="nome" formControlName="name" />
+            <small class = "error-message" *ngIf="formClient.controls['name'].hasError('required') && (formClient.controls['name'].touched)">
+              O nome não pode estar em branco.
+            </small>
+            <small class = "error-message" *ngIf="formClient.controls['name'].hasError('nnullValidator') && (formClient.controls['name'].touched)">
+              O nome não pode ser null.
+            </small>
+
+          <p>
+            <label for="senha_cad">Seu CPF</label>
+            <input id="senha_cad" name="senha_cad" required="required" type="password" placeholder="ex. 00000000000" formControlName="cpf" />
+          </p>
+          <p>
+            <label for="email_cad">Seu e-mail</label>
+            <input id="email_cad" name="email_cad" required="required" type="email" placeholder="contato@htmlecsspro.com" formControlName="email"/>
+          </p>
+          <p>
+            <input type="submit" value="Cadastrar"/>
+          </p>
+
+          <p class="link">
+            Já tem conta?
+            <a href="#paralogin"> Ir para Login </a>
+          </p>
+      </form>
+    </div>
+  </div>
+
+
+</div>
