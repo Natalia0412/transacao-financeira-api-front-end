@@ -45,8 +45,8 @@ export class ClientComponent implements OnInit {
       } as IClient
 
       this.clientService.createClient(client);
-      this.formClient.reset();
       console.log(this.formClient.value);
+      this.formClient.reset();
     } else {
       // Handle form errors
       console.log('Formulário inválido');
