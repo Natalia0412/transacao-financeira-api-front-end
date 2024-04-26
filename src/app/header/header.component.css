@@ -1,0 +1,45 @@
+.main-header {
+  padding: 10px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+
+
+}
+
+
+
+
+
+.main-header__menu ul {
+  display: flex;
+  justify-content: space-evenly ;
+  list-style-type: none;
+
+}
+
+.main-header__menu a {
+  padding: 10px 10px;
+  color:#405c60;/*var(--gray)*/
+  font-weight: 400;
+  font-size: 22px;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+
+}
+
+.main-header__menu a:hover {
+  background-color: var(--blue);
+  color: blueviolet;
+}
+
+.container-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  flex: 1;
+}
+
+
