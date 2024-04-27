@@ -14,7 +14,10 @@ export class ClientService {
   constructor(private httpClient: HttpClient) { }
 
   createClient(client: IClient) : Observable<Object>{
-    return this.httpClient.post(`${this.baseURL}`,client);
+    console.log("service",client)
+    const client1 =this.httpClient.post(`${this.baseURL}`,client);
+    console.log("service depois post",client1)
+    return client1
   }
 
   getClient(): Observable<IClientList[]> {

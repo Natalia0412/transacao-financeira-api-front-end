@@ -33,6 +33,8 @@ export class ClientComponent implements OnInit {
   }
 
 
+  clientResponse: any;
+
 
   onSubmit(): void {
     if (this.formClient.valid) {
@@ -44,12 +46,18 @@ export class ClientComponent implements OnInit {
 
       } as IClient
 
-      this.clientService.createClient(client);
-      console.log(this.formClient.value);
-      this.formClient.reset();
+      this.clientService.createClient(client).subscribe(
+        (response)=> {
+          console.log('Cliente criado com sucesso:', response);
+          this.clientResponse = response;
+        this.formClient.reset();
+        }
+      );
+
     } else {
       // Handle form errors
-      console.log('Formulário inválido');
+
+      console.log('Formulário inválido', this.formClient.errors);
     }
   }
 

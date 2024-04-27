@@ -35,7 +35,7 @@
             </small>
           </p>
           <p>
-            <input type="submit" value="Cadastrar"/>
+            <input type="submit" value="Cadastrar" />
           </p>
 
 
@@ -44,4 +44,25 @@
   </div>
 
 
+</div>
+<div class="container" *ngIf="clientResponse">
+  <h2>Detalhes do Cliente</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Email</th>
+        <th>id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ clientResponse.name }}</td>
+        <td>{{ clientResponse.cpf }}</td>
+        <td>{{ clientResponse.email }}</td>
+        <td>{{ clientResponse.id }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
