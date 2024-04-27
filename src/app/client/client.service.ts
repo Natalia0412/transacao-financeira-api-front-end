@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IClient } from './client/iclient';
-import { Observable } from 'rxjs';
+import { IClient } from './iclient';
+import { Observable, observable } from 'rxjs';
+import { IClientList } from './iclientList';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,8 @@ export class ClientService {
     return this.httpClient.post(`${this.baseURL}`,client);
   }
 
-  getClient(){
-    return this.httpClient.get(`${this.baseURL}`)
+  getClient(): Observable<IClientList[]> {
+    return  this.httpClient.get<IClientList[]>(`${this.baseURL}`)
+
   }
 }

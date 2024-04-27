@@ -1,16 +1,37 @@
-<header class="main-header">
-
-  <div class="container-menu">
-
-
-      <nav class="main-header__menu">
-        <ul>
-          <li><a routerLink="client">Cadastrar Cliente</a></li>
-          <li><a routerLink="#">Cadastrar Empresa</a></li>
-          <li><a routerLink="#">Transação Financeira</a></li>
-        </ul>
-      </nav>
-
-
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Cliente
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="client">Cadastrar cliente</a>
+      <a routerLink="client-list">Listar clientes</a>
+      <a routerLink="#">Consultar cliente</a>
+      <a routerLink="#">Alterar cliente</a>
+      <a routerLink="#">Excluir cliente</a>
+    </div>
   </div>
-</header>
+  <div class="dropdown">
+    <button class="dropbtn">Empresa
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="#">Cadastrar Empresa</a>
+      <a routerLink="#">Listar Empresas</a>
+      <a routerLink="#">Consultar Empresa</a>
+      <a routerLink="#">Alterar Empresa</a>
+      <a routerLink="#">Excluir Empresa</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Transações
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a routerLink="#">Saque</a>
+      <a routerLink="#">Deposito</a>
+    </div>
+  </div>
+  <a href="javascript:void(0);" class="icon" (click)="toggleResponsiveClass()">&#9776;</a>
+</div>

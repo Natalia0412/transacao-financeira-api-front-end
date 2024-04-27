@@ -6,14 +6,16 @@ import { ClientComponent } from './client.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
+
 @NgModule({
   declarations: [
-    ClientComponent
+    ClientComponent,
   ],
   imports: [
     CommonModule,
     ClientRoutingModule,
     ReactiveFormsModule,
+
   ]
 })
 export class ClientModule { }
